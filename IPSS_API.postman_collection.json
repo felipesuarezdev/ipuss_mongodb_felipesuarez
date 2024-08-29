@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "cf3743c3-15fe-4d67-9ecc-481fbf53ced6",
+		"name": "IPSS_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16229090"
+	},
+	"item": [
+		{
+			"name": "crear_persona",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Persona\",\n  \"lastName\": \"Para Eliminar\",\n  \"works\": [\n    {\n      \"company\": \"empresa\",\n      \"initContract\": \"02-10-2023\",\n      \"finishContract\": \"10-08-2024\",\n      \"position\": \"zxczxc\"\n    }\n  ],\n  \"nationality\": \"Chilena\",\n  \"year\": 2003\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rutas-api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rutas-api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rutas-api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rutas-api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_porid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rutas-api/66d0c85e60320090f1e42884",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rutas-api",
+						"66d0c85e60320090f1e42884"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar_persona",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Adela\",\n  \"lastName\": \"Gonzalez\",\n  \"works\": [\n    {\n      \"company\": \"CanonUpdate\",\n      \"initContract\": \"02-10-2023\",\n      \"finishContract\": \"10-08-2024\",\n      \"position\": \"Fotógrafa\"\n    },\n    {\n      \"company\": \"Sony\",\n      \"initContract\": \"02-10-2023\",\n      \"finishContract\": \"10-08-2024\",\n      \"position\": \"Fotógrafa y producción audiovisual\"\n    },\n    {\n      \"company\": \"Armada de Chile\",\n      \"initContract\": \"02-10-2023\",\n      \"finishContract\": \"10-08-2024\",\n      \"position\": \"Productor Audiovisual\"\n    }\n  ],\n  \"nationality\": \"Chilena\",\n  \"year\": 2003\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rutas-api/66d0c99660320090f1e4288d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rutas-api",
+						"66d0c99660320090f1e4288d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_persona",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rutas-api/66d0d21e60320090f1e428a4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rutas-api",
+						"66d0d21e60320090f1e428a4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_todostrabajos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rutas-api/66d0c99660320090f1e4288d/works",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rutas-api",
+						"66d0c99660320090f1e4288d",
+						"works"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agregar_trabajo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"company\": \"New Company\",\n  \"initContract\": \"01-01-2024\",\n  \"finishContract\": \"12-12-2024\",\n  \"position\": \"Nuevo cargo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rutas-api/66d0c91f60320090f1e4288a/works",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rutas-api",
+						"66d0c91f60320090f1e4288a",
+						"works"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificar_trabajo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"company\": \"Nueva Empresa Actualizada\",\n  \"initContract\": \"01-01-2024\",\n  \"finishContract\": \"12-12-2024\",\n  \"position\": \"Nuevo cargo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rutas-api/66d0c91f60320090f1e4288a/works/66d0d64c60320090f1e428b7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rutas-api",
+						"66d0c91f60320090f1e4288a",
+						"works",
+						"66d0d64c60320090f1e428b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar_trabajo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rutas-api/66d0c99660320090f1e4288d/works/66d0d16760320090f1e428a0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rutas-api",
+						"66d0c99660320090f1e4288d",
+						"works",
+						"66d0d16760320090f1e428a0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
